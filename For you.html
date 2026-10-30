@@ -26,6 +26,17 @@
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 </head>
+<script>
+document.addEventListener("click", function iniciarMusica() {
+    const musica = document.querySelector("audio");
+
+    if (musica) {
+        musica.play().catch(error => {
+            console.log("No se pudo reproducir:", error);
+        });
+    }
+}, { once: true });
+</script>
 <body onclick="document.getElementById('audio').play()">
 <canvas id="galaxy-canvas"></canvas>
 <div class="pill">💖Te Amo Mi Alfajorcito dulce🍭</div>
